@@ -277,10 +277,10 @@ nav ul li a.active::after {
 
 .search-box {
     display: flex;
-    background-color: rgb(169, 55, 55);
+    background-color: rgb(255, 253, 253);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    /* overflow: hidden; */
+    overflow: hidden;
     margin-bottom: 2rem;
 }
 

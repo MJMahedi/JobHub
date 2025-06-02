@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobHub - Find Your Dream Job</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-content">
+            <h2>JobHub</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>JobHub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#jobs">Jobs</a></li>
+                    <li><a href="#companies">Companies</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline">Sign In</button>
+                <button class="btn btn-primary">Post a Job</button>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#jobs">Jobs</a></li>
+            <li><a href="#companies">Companies</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#" class="btn btn-outline">Sign In</a></li>
+            <li><a href="#" class="btn btn-primary">Post a Job</a></li>
+        </ul>
+    </div>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="reveal-text">Find Your <span>Dream Job</span> Today</h1>
+                <p class="reveal-text">Discover thousands of job opportunities with all the information you need.</p>
+                <div class="search-box reveal-item">
+                    <div class="search-input">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Job title or keyword">
+                    </div>
+                    <div class="search-input">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="Location">
+                    </div>
+                    <button class="btn btn-primary">Search</button>
+                </div>
+                <div class="popular-searches reveal-item">
+                    <span>Popular Searches:</span>
+                    <a href="#">Developer</a>
+                    <a href="#">Designer</a>
+                    <a href="#">Marketing</a>
+                    <a href="#">Remote</a>
+                </div>
+            </div>
+            <div class="hero-image reveal-item">
+                <img src="/placeholder.svg?height=500&width=500" alt="Job search illustration">
+            </div>
+        </div>
+        <div class="shape-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="stats" class="stats">
+        <div class="container">
+            <div class="stat-item reveal-item">
+                <h2>10k+</h2>
+                <p>Job Listings</p>
+            </div>
+            <div class="stat-item reveal-item">
+                <h2>5k+</h2>
+                <p>Companies</p>
+            </div>
+            <div class="stat-item reveal-item">
+                <h2>25k+</h2>
+                <p>Hired</p>
+            </div>
+            <div class="stat-item reveal-item">
+                <h2>98%</h2>
+                <p>Success Rate</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="jobs" class="jobs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal-text">Featured <span>Jobs</span></h2>
+                <p class="reveal-text">Handpicked jobs for you to apply right away</p>
+            </div>
+            
+            <div class="filter-tabs reveal-item">
+                <button class="filter-btn active" data-filter="all">All Jobs</button>
+                <button class="filter-btn" data-filter="remote">Remote</button>
+                <button class="filter-btn" data-filter="fulltime">Full Time</button>
+                <button class="filter-btn" data-filter="parttime">Part Time</button>
+                <button class="filter-btn" data-filter="contract">Contract</button>
+            </div>
+            
+            <div class="jobs-container">
+                <div class="job-card" data-category="fulltime remote">
+                    <div class="job-card-header">
+                        <div class="company-logo">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Google">
+                        </div>
+                        <div class="job-card-title">
+                            <h3>Senior Frontend Developer</h3>
+                            <p>Google Inc.</p>
+                        </div>
+                        <div class="job-card-bookmark">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <div class="job-card-body">
+                        <div class="job-tags">
+                            <span class="tag">Remote</span>
+                            <span class="tag">Full Time</span>
+                        </div>
+                        <div class="job-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>San Francisco, CA</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>$120k - $150k</span>
+                            </div>
+                        </div>
+                        <p class="job-description">We are looking for an experienced Frontend Developer to join our team...</p>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="btn btn-outline">Apply Now</button>
+                        <span class="posted-time">Posted 2 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="job-card" data-category="parttime">
+                    <div class="job-card-header">
+                        <div class="company-logo">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Facebook">
+                        </div>
+                        <div class="job-card-title">
+                            <h3>UX/UI Designer</h3>
+                            <p>Facebook</p>
+                        </div>
+                        <div class="job-card-bookmark">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <div class="job-card-body">
+                        <div class="job-tags">
+                            <span class="tag">Part Time</span>
+                        </div>
+                        <div class="job-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>New York, NY</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>$80k - $100k</span>
+                            </div>
+                        </div>
+                        <p class="job-description">We're seeking a talented UX/UI Designer to create amazing user experiences...</p>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="btn btn-outline">Apply Now</button>
+                        <span class="posted-time">Posted 1 week ago</span>
+                    </div>
+                </div>
+                
+                <div class="job-card" data-category="contract remote">
+                    <div class="job-card-header">
+                        <div class="company-logo">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Amazon">
+                        </div>
+                        <div class="job-card-title">
+                            <h3>Backend Developer</h3>
+                            <p>Amazon</p>
+                        </div>
+                        <div class="job-card-bookmark">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <div class="job-card-body">
+                        <div class="job-tags">
+                            <span class="tag">Remote</span>
+                            <span class="tag">Contract</span>
+                        </div>
+                        <div class="job-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Remote</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>$100k - $130k</span>
+                            </div>
+                        </div>
+                        <p class="job-description">Join our team as a Backend Developer to build scalable and efficient systems...</p>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="btn btn-outline">Apply Now</button>
+                        <span class="posted-time">Posted 3 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="job-card" data-category="fulltime">
+                    <div class="job-card-header">
+                        <div class="company-logo">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Microsoft">
+                        </div>
+                        <div class="job-card-title">
+                            <h3>Product Manager</h3>
+                            <p>Microsoft</p>
+                        </div>
+                        <div class="job-card-bookmark">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <div class="job-card-body">
+                        <div class="job-tags">
+                            <span class="tag">Full Time</span>
+                        </div>
+                        <div class="job-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Seattle, WA</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>$130k - $160k</span>
+                            </div>
+                        </div>
+                        <p class="job-description">We are looking for a Product Manager to lead our product development efforts...</p>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="btn btn-outline">Apply Now</button>
+                        <span class="posted-time">Posted 5 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="job-card" data-category="remote contract">
+                    <div class="job-card-header">
+                        <div class="company-logo">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Apple">
+                        </div>
+                        <div class="job-card-title">
+                            <h3>iOS Developer</h3>
+                            <p>Apple Inc.</p>
+                        </div>
+                        <div class="job-card-bookmark">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <div class="job-card-body">
+                        <div class="job-tags">
+                            <span class="tag">Remote</span>
+                            <span class="tag">Contract</span>
+                        </div>
+                        <div class="job-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Remote</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>$110k - $140k</span>
+                            </div>
+                        </div>
+                        <p class="job-description">Join our team to develop cutting-edge iOS applications...</p>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="btn btn-outline">Apply Now</button>
+                        <span class="posted-time">Posted 1 day ago</span>
+                    </div>
+                </div>
+                
+                <div class="job-card" data-category="fulltime">
+                    <div class="job-card-header">
+                        <div class="company-logo">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Netflix">
+                        </div>
+                        <div class="job-card-title">
+                            <h3>Data Scientist</h3>
+                            <p>Netflix</p>
+                        </div>
+                        <div class="job-card-bookmark">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <div class="job-card-body">
+                        <div class="job-tags">
+                            <span class="tag">Full Time</span>
+                        </div>
+                        <div class="job-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Los Angeles, CA</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>$140k - $180k</span>
+                            </div>
+                        </div>
+                        <p class="job-description">We're looking for a Data Scientist to help us analyze and interpret complex data...</p>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="btn btn-outline">Apply Now</button>
+                        <span class="posted-time">Posted 4 days ago</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-more-container reveal-item">
+                <button class="btn btn-primary">View More Jobs</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="companies" class="companies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal-text">Top <span>Companies</span></h2>
+                <p class="reveal-text">Discover top companies hiring now</p>
+            </div>
+            
+            <div class="companies-grid">
+                <div class="company-card reveal-item">
+                    <div class="company-logo">
+                        <img src="/placeholder.svg?height=80&width=80" alt="Google">
+                    </div>
+                    <h3>Google</h3>
+                    <p>Tech Giant</p>
+                    <div class="company-info">
+                        <span><i class="fas fa-briefcase"></i> 150+ Jobs</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Multiple Locations</span>
+                    </div>
+                    <button class="btn btn-outline">View Jobs</button>
+                </div>
+                
+                <div class="company-card reveal-item">
+                    <div class="company-logo">
+                        <img src="/placeholder.svg?height=80&width=80" alt="Microsoft">
+                    </div>
+                    <h3>Microsoft</h3>
+                    <p>Software Company</p>
+                    <div class="company-info">
+                        <span><i class="fas fa-briefcase"></i> 120+ Jobs</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Multiple Locations</span>
+                    </div>
+                    <button class="btn btn-outline">View Jobs</button>
+                </div>
+                
+                <div class="company-card reveal-item">
+                    <div class="company-logo">
+                        <img src="/placeholder.svg?height=80&width=80" alt="Amazon">
+                    </div>
+                    <h3>Amazon</h3>
+                    <p>E-commerce & Tech</p>
+                    <div class="company-info">
+                        <span><i class="fas fa-briefcase"></i> 200+ Jobs</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Multiple Locations</span>
+                    </div>
+                    <button class="btn btn-outline">View Jobs</button>
+                </div>
+                
+                <div class="company-card reveal-item">
+                    <div class="company-logo">
+                        <img src="/placeholder.svg?height=80&width=80" alt="Apple">
+                    </div>
+                    <h3>Apple</h3>
+                    <p>Tech & Consumer Electronics</p>
+                    <div class="company-info">
+                        <span><i class="fas fa-briefcase"></i> 100+ Jobs</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Multiple Locations</span>
+                    </div>
+                    <button class="btn btn-outline">View Jobs</button>
+                </div>
+                
+                <div class="company-card reveal-item">
+                    <div class="company-logo">
+                        <img src="/placeholder.svg?height=80&width=80" alt="Facebook">
+                    </div>
+                    <h3>Facebook</h3>
+                    <p>Social Media</p>
+                    <div class="company-info">
+                        <span><i class="fas fa-briefcase"></i> 90+ Jobs</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Multiple Locations</span>
+                    </div>
+                    <button class="btn btn-outline">View Jobs</button>
+                </div>
+                
+                <div class="company-card reveal-item">
+                    <div class="company-logo">
+                        <img src="/placeholder.svg?height=80&width=80" alt="Netflix">
+                    </div>
+                    <h3>Netflix</h3>
+                    <p>Entertainment</p>
+                    <div class="company-info">
+                        <span><i class="fas fa-briefcase"></i> 70+ Jobs</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Multiple Locations</span>
+                    </div>
+                    <button class="btn btn-outline">View Jobs</button>
+                </div>
+                
+                <div class="company-card reveal-item">
+                    <div class="company-logo">
+                        <img src="/placeholder.svg?height=80&width=80" alt="Tesla">
+                    </div>
+                    <h3>Tesla</h3>
+                    <p>Automotive & Energy</p>
+                    <div class="company-info">
+                        <span><i class="fas fa-briefcase"></i> 80+ Jobs</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Multiple Locations</span>
+                    </div>
+                    <button class="btn btn-outline">View Jobs</button>
+                </div>
+                
+                <div class="company-card reveal-item">
+                    <div class="company-logo">
+                        <img src="/placeholder.svg?height=80&width=80" alt="Adobe">
+                    </div>
+                    <h3>Adobe</h3>
+                    <p>Software Company</p>
+                    <div class="company-info">
+                        <span><i class="fas fa-briefcase"></i> 60+ Jobs</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Multiple Locations</span>
+                    </div>
+                    <button class="btn btn-outline">View Jobs</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal-text">How <span>It Works</span></h2>
+                <p class="reveal-text">Follow these simple steps to find your dream job</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step reveal-item">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Create an Account</h3>
+                    <p>Sign up and complete your profile with your skills and experience.</p>
+                </div>
+                
+                <div class="step-connector reveal-item"></div>
+                
+                <div class="step reveal-item">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Search Jobs</h3>
+                    <p>Browse through thousands of job listings or use filters to find the perfect match.</p>
+                </div>
+                
+                <div class="step-connector reveal-item"></div>
+                
+                <div class="step reveal-item">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Apply for Jobs</h3>
+                    <p>Submit your application with just a few clicks and track your application status.</p>
+                </div>
+                
+                <div class="step-connector reveal-item"></div>
+                
+                <div class="step reveal-item">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Get Hired</h3>
+                    <p>Interview with employers and land your dream job.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal-text">What Our <span>Users Say</span></h2>
+                <p class="reveal-text">Success stories from job seekers who found their dream jobs</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"JobHub helped me find my dream job in just 2 weeks! The platform is so easy to use and has the best job listings."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=60&width=60" alt="John Doe">
+                            <div class="author-info">
+                                <h4>John Doe</h4>
+                                <p>Frontend Developer at Google</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"After months of searching, I found the perfect job through JobHub. The filtering options made it easy to find exactly what I was looking for."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Jane Smith">
+                            <div class="author-info">
+                                <h4>Jane Smith</h4>
+                                <p>UX Designer at Facebook</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The job recommendations were spot on! JobHub understood exactly what I was looking for and matched me with the perfect company."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Mike Johnson">
+                            <div class="author-info">
+                                <h4>Mike Johnson</h4>
+                                <p>Data Scientist at Amazon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content reveal-item">
+                <h2>Ready to Find Your Dream Job?</h2>
+                <p>Join thousands of job seekers who have found their perfect match with JobHub.</p>
+                <button class="btn btn-primary">Get Started Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content reveal-item">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest job listings and career advice delivered to your inbox.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button class="btn btn-primary">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>JobHub</h2>
+                    <p>Find your dream job today</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-link-group">
+                        <h3>For Job Seekers</h3>
+                        <ul>
+                            <li><a href="#">Browse Jobs</a></li>
+                            <li><a href="#">Browse Companies</a></li>
+                            <li><a href="#">Salary Calculator</a></li>
+                            <li><a href="#">Career Advice</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-link-group">
+                        <h3>For Employers</h3>
+                        <ul>
+                            <li><a href="#">Post a Job</a></li>
+                            <li><a href="#">Browse Resumes</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Recruitment Solutions</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-link-group">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 JobHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
